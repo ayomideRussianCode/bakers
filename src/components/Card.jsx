@@ -7,7 +7,7 @@ const Card = () => {
         <div className="w-56 rounded-xl shadow-lg p-4 my-auto">
           <img
             className="h-6 w-6 m-4"
-            src="../../public/icon-1.svg"
+            src="/public/icon-1.svg"
             alt="icon"
           />
           <h2 className="text-[#404c60] m-4 text-xs font-medium">
@@ -22,7 +22,7 @@ const Card = () => {
         <div className="w-56 rounded-xl shadow-lg p-2  my-auto">
           <img
             className="h-6 w-6 m-4"
-            src="../../public/icon-1.svg"
+            src="/public/icon-1.svg"
             alt="icon"
           />
           <h2 className="text-[#404c60] m-4 text-xs font-medium">
@@ -37,7 +37,7 @@ const Card = () => {
         <div className="w-56 rounded-xl shadow-lg p-2 my-auto">
           <img
             className="h-6 w-6 m-4"
-            src="../../public/icon-1.svg"
+            src="/public/icon-1.svg"
             alt="icon"
           />
           <h2 className="text-[#404c60] m-4 text-xs font-medium">
