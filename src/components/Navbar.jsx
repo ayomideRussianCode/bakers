@@ -10,7 +10,7 @@ const Navbar = () => {
     <>
       <header className="flex w-auto bg-[#ffffff] items-center justify-between mx-6 lg:mx-24 my-2 sm:px-4 ">
         <div className="sm:space-x-8 sm:px-6 lg:px-8 flex ">
-          <img className="h-8" src="/public/Logo.svg" alt="Logo" />
+          <img className="h-8" src="/Logo.svg" alt="Logo" />
         </div>
         <div>
           <button></button>
@@ -71,7 +71,7 @@ export const Hero = () => {
       <div>
         <img
           className="h-50 object-cover sm:h-60 md:h-70 lg:h-full w-full"
-          src="/public/Bakery image 1 .png"
+          src="/Bakery image 1 .png"
           alt=""
         />
       </div>
