@@ -1,15 +1,17 @@
-
+import { useState } from "react";
+import { RiMenu3Line } from "react-icons/ri";
+import { RiCloseLine } from "react-icons/ri";
 
 const Navbar = () => {
-  // const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <header className="flex w-auto bg-[#ffffff] items-center justify-between mx-6 lg:mx-24 my-2 sm:px-4 ">
         <div className="sm:space-x-8 sm:px-6 lg:px-8 flex ">
-          <img className="lg:h-8 md:h-6 h-4" src="/Logo.svg" alt="Logo" />
+          <img className="h-8" src="/Logo.svg" alt="Logo" />
         </div>
-  
+        {/* desktop nav */}
         <div className="">
           <nav className=" hidden md:flex items-center px-5 py-2 space-x-8">
             <a
@@ -31,8 +33,37 @@ const Navbar = () => {
               Create Account
             </a>
           </nav>
+          {/* hamburger button */}
+          <button
+            className="md:hidden text-[#404c60] text-2xl"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <RiCloseLine /> : <RiMenu3Line />}
+          </button>
         </div>
       </header>
+      {isOpen && (
+        <div className="md:hidden items-end bg-white shadow-md p-6 flex flex-col gap-4">
+          <a
+            className="no-underline font-productSans text-[#404c60] text-xs"
+            href="#"
+          >
+            FAQs
+          </a>
+          <a
+            className="no-underline font-productSans text-xs text-[#404c60]"
+            href="#"
+          >
+            Log in
+          </a>
+          <a
+            className="no-underline font-productSans text-xs text-[#ffffff] rounded-lg shadow-md px-2 py-2 bg-[#ce0639]"
+            href="#"
+          >
+            Create Account
+          </a>
+        </div>
+      )}
     </>
   );
 };
