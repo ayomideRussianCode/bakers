@@ -3,15 +3,16 @@ const ProductPlan = () => {
   return (
     <div className="relative font-productSans bg-[#ce0639] h-full w-full pt-4 pb-32 my-10">
       {/* <img src="/breadpattern-rectangle.png" alt="" /> */}
-      <div className=" flex items-center justify-center text-[#ffffff]">
+      <div className=" flex text-center justify-center text-[#ffffff]">
         <div className="flex-col space-y-4 ">
-          <h2 className="lg:text-2xl text-md font-semibold">
-            We've got <span className="font-bold">flexible plans</span> for
+          <h2 className="lg:text-2xl text-md font-medium">
+            We've got <span className="font-bold">Flexible Plans</span> for
             everyone!
           </h2>
           <div className="lg:mx-20">
-            <p className="text-sm">Choose a plan that works best for you</p>
-            <p>and your team.</p>
+            <p className="text-sm w-60 text-center">
+              Choose a plan that works best for you and your team.
+            </p>
           </div>
         </div>
       </div>

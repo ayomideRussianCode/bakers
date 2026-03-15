@@ -78,7 +78,7 @@ export const Hero = () => {
           alt=""
         />
       </div>
-      <div className="flex my-8 justify-center items-center bg-[#ffffff] font-bold text-xl font-productSans">
+      <div className="flex my-8 text-center justify-center items-center bg-[#ffffff] font-bold text-2xl font-productSans">
         <h2 className="text-[#2b2b2b]">
           Your <span className="text-[#ce0639]">all-in-one</span> bakery
           solution
