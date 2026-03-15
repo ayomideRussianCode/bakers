@@ -1,4 +1,4 @@
-import React from 'react'
+import Button from "./Button";
 
 const Footer = () => {
   return (
@@ -47,12 +47,7 @@ export const CTA = () => {
         <p> Try Bakery Management today!</p>
       </div>
       <div className="flex text-center items-center justify-center">
-        <button
-          className="no-underline font-productSans text-xs text-[#ffffff] rounded-lg shadow-md px-4 py-2 bg-[#ce0639]"
-          href="#"
-        >
-          Create Account
-        </button>
+        <Button>Create Account</Button>
       </div>
     </div>
   );
