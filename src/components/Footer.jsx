@@ -2,29 +2,41 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <>
-      <div className=" relative h-56 text-[#ffffff] bg-[#672a4e]">
-        <div className='absolute '>
-          <img className="" src="/breadpattern-rectangle.png" alt="" />
-        </div>
-        <div>
-          <div className=''>
-            <ul className="lg:flex md:flex justify-evenly items-center text-xs font-productSans  py-12 px-12">
-                <img className='h-14' src="/logo-big-diap 1.png" alt="footer-logo" />
-              <li>61 Queens Street, Alagomeji, Yaba, Lagos</li>
-              <li>big.nigeria@bakeryinitiatives.com</li>
-              <div className="">
-                <li>+234-818-838-0199 </li>
-                <li>+234-818-838-0201</li>
-                <li>+234-803-474-0253</li>
-              </div>
-            </ul>
-          </div>
-        </div>
+    <div className="relative text-[#ffffff] bg-[#672a4e] overflow-hidden">
+      
+      {/* Decorative pattern - stays in corner, doesn't cover content */}
+      <div className="absolute inset-y-0  left-0">
+        <img className='hidden md:block' src="/breadpattern-rectangle.png" alt="footer-pattern" />
       </div>
-    </>
-  );
+
+      {/* Content */}
+      <div className="relative flex flex-col md:flex-row items-center md:justify-evenly gap-8 py-12 px-8 text-xs font-productSans">
+        
+        {/* Logo */}
+        <img className="h-14" src="/logo-big-diap 1.png" alt="footer-logo" />
+
+        {/* Address */}
+        <p className="text-center md:text-left">
+          61 Queens Street, Alagomeji, Yaba, Lagos
+        </p>
+
+        {/* Email */}
+        <p className="text-center md:text-left">
+          big.nigeria@bakeryinitiatives.com
+        </p>
+
+        {/* Phone numbers */}
+        <div className="flex flex-col items-center md:items-start gap-1">
+          <p>+234-818-838-0199</p>
+          <p>+234-818-838-0201</p>
+          <p>+234-803-474-0253</p>
+        </div>
+
+      </div>
+    </div>
+  )
 }
+
 export const CTA = () => {
   return (
     <div className="font-productSans my-20 bg-[#ffffff]">
