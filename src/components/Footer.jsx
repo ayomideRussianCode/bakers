@@ -39,7 +39,7 @@ const Footer = () => {
 
 export const CTA = () => {
   return (
-    <div className="font-productSans my-20 bg-[#ffffff]">
+    <div className="font-productSans mt-60 mb-20 bg-[#ffffff]">
       <div className="flex text-center justify-center items-center text-[#2b2b2b] font-bold text-3xl ">
         <h1>Take your bakery to the next level now.</h1>
       </div>

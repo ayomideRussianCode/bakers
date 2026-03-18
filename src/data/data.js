@@ -35,3 +35,42 @@ export const instructionsList = [
     text: "Proceed to enjoy real-time access of your bakery operations, with continuous updates of processes being as easy as few clicks and input. ",
   },
 ];
+
+export const plansCardContent = [
+  {
+    img: "/icon-7.svg",
+    duration: "1-month plan",
+    text: "Perfect for teams that prefer monthly subscriptions. Unlimited access!",
+    price: "N25,000.00",
+    billingMethod: "Billed monthly",
+    productFeature: "All product features",
+    buttonText: "Get 1-month plan",
+  },
+  {
+    img: "/icon-7.svg",
+    duration: "3-months plan",
+    text: "Renew your subscription per quarter, unlimited access for 3 months.",
+    price: "N25,000.00",
+    billingMethod: "Billed quarterly",
+    productFeature: "All product features",
+    buttonText: "Get 3-months plan",
+  },
+  {
+    img: "/icon-7.svg",
+    duration: "6-months plan",
+    text: "Subscribe for 6-months and enjoy unlimited access for that period.",
+    price: "N250,000.00",
+    billingMethod: "Billed bi-yearly",
+    productFeature: "All product features",
+    buttonText: "Get 6-months plan",
+  },
+  {
+    img: "/icon-7.svg",
+    duration: "1-year plan",
+    text: "Perfect for teams that prefer yearly subscriptions.",
+    price: "N250,000.00",
+    billingMethod: "Billed yearly",
+    productFeature: "All product features",
+    buttonText: "Get 1-year plan",
+  },
+];

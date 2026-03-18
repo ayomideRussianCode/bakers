@@ -8,7 +8,7 @@ const Card = () => {
       <section className="flex justify-center items-center bg-[#ffffff] my-12 font-productSans">
         <div className="lg:flex md:flex lg:gap-x-10 ">
           {cardData.map((card, i) => (
-          <CardItem key={i} img={card.img} title={card.title} text={card.text} className="w-56"/>
+          <CardItem key={i} img={card.img} title={card.title} text={card.text} className="w-56 "/>
           ))}
         </div>
       </section>
