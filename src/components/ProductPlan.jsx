@@ -45,7 +45,9 @@ const ProductPlan = () => {
                   {card.productFeature}
                 </p>
               </div>
-              <Button className="my-4 w-full">{card.buttonText}</Button>
+              <div className="flex justify-center">
+                <Button className=" my-4 p-4">{card.buttonText}</Button>
+              </div>
             </CardItem>
           ))}
         </div>
