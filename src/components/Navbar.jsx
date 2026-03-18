@@ -2,6 +2,7 @@ import { useState } from "react";
 import { RiMenu3Line } from "react-icons/ri";
 import { RiCloseLine } from "react-icons/ri";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,12 +28,11 @@ const Navbar = () => {
             >
               Log in
             </a>
-            <a
+            <Link
               className="no-underline font-productSans text-xs text-[#ffffff] rounded-lg shadow-md px-4 py-2 bg-[#ce0639]"
-              href="#"
-            >
-              Create Account
-            </a>
+              to="/signup"
+            >Create Account</Link>
+          
           </nav>
           {/* hamburger button */}
           <button
@@ -57,7 +57,7 @@ const Navbar = () => {
           >
             Log in
           </a>
-       <Button>Create Account</Button>
+          <Button>Create Account</Button>
         </div>
       )}
     </>
