@@ -14,20 +14,7 @@ const fields = [
 const Password = () => {
   return (
     <Auth>
-      <h2 className="my-4 font-semibold text-2xl ">Create Password</h2>
-      <div className="flex my-4 items-center ">
-        <img
-          className="h-0.5 w-20 md:w-40 lg:w-40 "
-          src="Line.png"
-          alt="Line"
-        />
-        <p className="text-[#979797] mx-2 font-light text-xs">Or</p>
-        <img
-          className="h-0.5 w-20 md:w-40 lg:w-40 "
-          src="Line.png"
-          alt="Line"
-        />
-      </div>
+      <h2 className="my-4 font-semibold text-2xl ">Create Password</h2>git 
       <form className="flex flex-col">
         {fields.map((field, i) => (
           <Input
