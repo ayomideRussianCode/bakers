@@ -27,7 +27,7 @@ export const Input = ({ label, placeholder = "", type = "" }) => {
         {label}
       </label>
       <input
-        className="border border-[#979797] text-[#979797] font-extralight text-sm p-2 rounded-sm"
+        className="border outline-0 border-[#979797] text-[#979797] font-extralight text-sm p-2 rounded-sm"
         type={type}
         placeholder={placeholder}
       />
