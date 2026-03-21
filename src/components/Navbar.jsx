@@ -22,12 +22,12 @@ const Navbar = () => {
             >
               FAQs
             </a>
-            <a
+            <Link
               className="no-underline font-productSans text-xs text-[#404c60]"
-              href="#"
+              href="/login"
             >
               Log in
-            </a>
+            </Link>
             <Link
               className="no-underline font-productSans text-xs text-[#ffffff] rounded-lg shadow-md px-4 py-2 bg-[#ce0639]"
               to="/signup"
@@ -51,12 +51,12 @@ const Navbar = () => {
           >
             FAQs
           </a>
-          <a
+          <Link
             className="no-underline font-productSans text-xs text-[#404c60]"
-            href="#"
+            href="/login"
           >
             Log in
-          </a>
+          </Link>
           <Button>Create Account</Button>
         </div>
       )}
