@@ -14,7 +14,7 @@ const fields = [
 const Password = () => {
   return (
     <Auth>
-      <h2 className="my-4 font-semibold text-2xl ">Create Password</h2>git 
+      <h2 className="my-4 font-semibold text-2xl ">Create Password</h2>
       <form className="flex flex-col">
         {fields.map((field, i) => (
           <Input
@@ -27,7 +27,7 @@ const Password = () => {
         <Button className=" w-full my-6 font-semibold ">Create Account</Button>
         <p className="text-xs text-center text-[#979797]">
           Already have an account?
-          <Link to="/signup" className="text-[#ce0639] font-medium">
+          <Link to="/login" className="text-[#ce0639] font-medium">
             {" "}
             Log In
           </Link>

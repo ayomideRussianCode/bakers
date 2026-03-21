@@ -3,9 +3,9 @@ const Auth = ({ children, className = "" }) => {
     <div className="flex font-productSans ">
       {/* LHS */}
       <div className="w-full lg:w-1/2">
-        <div className="flex flex-col mx-30 my-2  ">
+        <div className="flex flex-col mx-10 lg:mx-30 my-2  ">
           <div className="flex">
-            <img className={`h-20 w-14 ${className}`} src="/Logo.svg" alt="" />
+            <img className={`h-20 w-20 ${className}`} src="/Logo.svg" alt="" />
           </div>
           {children}
         </div>

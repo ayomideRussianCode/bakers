@@ -20,7 +20,7 @@ const fields = [
 const SignUp = () => {
   return (
     <Auth>
-      <h2 className="my-4 font-semibold text-2xl ">Create Account</h2>
+      <h2 className="my-4 font-semibold text-lg lg:text-2xl ">Create Account</h2>
       <form className="flex flex-col">
         {fields.map((field, i) => (
           <Input
