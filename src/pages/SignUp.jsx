@@ -30,7 +30,7 @@ const SignUp = () => {
             type={field.type}
           />
         ))}
-        <Button className=" w-full my-6 font-semibold ">Continue</Button>
+        <Button className=" w-full my-6 font-semibold "><Link to="/passwordpage">Continue</Link></Button>
         <p className="text-xs text-center text-[#979797]">
           Already have an account?
           <Link to="/login" className="text-[#ce0639] font-medium"> Log In</Link>

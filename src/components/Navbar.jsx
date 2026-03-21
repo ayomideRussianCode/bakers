@@ -31,8 +31,9 @@ const Navbar = () => {
             <Link
               className="no-underline font-productSans text-xs text-[#ffffff] rounded-lg shadow-md px-4 py-2 bg-[#ce0639]"
               to="/signup"
-            >Create Account</Link>
-          
+            >
+              Create Account
+            </Link>
           </nav>
           {/* hamburger button */}
           <button
@@ -57,7 +58,9 @@ const Navbar = () => {
           >
             Log in
           </Link>
-          <Button>Create Account</Button>
+          <Button>
+            <Link to="/signup">Create Account</Link>
+          </Button>
         </div>
       )}
     </>
