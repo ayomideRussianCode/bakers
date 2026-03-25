@@ -24,7 +24,7 @@ const Navbar = () => {
             </a>
             <Link
               className="no-underline font-productSans text-xs text-[#404c60]"
-              href="/login"
+              to="/login"
             >
               Log in
             </Link>
@@ -48,13 +48,13 @@ const Navbar = () => {
         <div className="md:hidden items-end bg-white shadow-md p-6 flex flex-col gap-4">
           <a
             className="no-underline font-productSans text-[#404c60] text-xs"
-            href="#"
+            to="#"
           >
             FAQs
           </a>
           <Link
             className="no-underline font-productSans text-xs text-[#404c60]"
-            href="/login"
+            to="/login"
           >
             Log in
           </Link>
