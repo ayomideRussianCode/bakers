@@ -40,7 +40,7 @@ const LogIn = () => {
         setError("No account found with this email")
       } else if (err.code === "auth/wrong-password"){
         setError("Incorrect password")
-      } else if(err.code === "auth/invalid-credentials"){
+      } else if(err.code === "auth/invalid-credential"){
         setError("Invalid email or password")
       } else {
     setError("Something went wrong. Please try again.");
