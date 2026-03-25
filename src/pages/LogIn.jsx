@@ -43,7 +43,7 @@ const LogIn = () => {
       } else if(err.code === "auth/invalid-credentials"){
         setError("Invalid email or password")
       } else {
-        setError(err.message)
+    setError("Something went wrong. Please try again.");
       }
     }
    }
