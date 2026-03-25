@@ -74,3 +74,30 @@ export const plansCardContent = [
     buttonText: "Get 1-year plan",
   },
 ];
+
+export const stepOneFields = [
+  {
+    label: "Full Name",
+    placeholder: "First name and last name",
+    type: "text",
+    name: "fullName"
+  },
+  { label: "Email", placeholder: "you@example.com", type: "email", name:"email" },
+  { label: "Phone Number", placeholder: "Enter phone number", type: "number" , name:"phoneNumber"},
+  {
+    label: "Company Name",
+    placeholder: "Enter company name",
+    type: "text",
+    name: "companyName"
+  },
+];
+
+export const stepTwoFields =  [
+  {
+    label: "Create your password ",
+    placeholder: "Enter password",
+    type: "password",
+    name: "password"
+  },
+  { label: "Confirm password", placeholder: "Enter password", type: "password", name: "confirmPassword" },
+];

@@ -20,7 +20,7 @@ const Auth = ({ children, className = "" }) => {
 
 export default Auth;
 
-export const Input = ({ label, placeholder = "", type = "" }) => {
+export const Input = ({ label, placeholder = "", type = "", name="" , value="", onChange=""}) => {
   return (
     <>
       <label className="text-md my-2 text-[#2b2b2b] font-normal" htmlFor="">
@@ -30,6 +30,9 @@ export const Input = ({ label, placeholder = "", type = "" }) => {
         className="border outline-0 border-[#979797] text-[#979797] font-extralight text-sm p-2 rounded-sm"
         type={type}
         placeholder={placeholder}
+        name={name}
+        value ={value}
+        onChange={onChange}
       />
     </>
   );

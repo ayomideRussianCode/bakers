@@ -1,27 +1,84 @@
+import { useState } from "react";
 import Auth from "../components/Auth";
 import { Input } from "../components/Auth";
 import Button from "../components/Button";
-import { Link } from "react-router-dom";
+import { stepTwoFields } from "../data/data";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { auth } from "../firebase";
+import { updateProfile, createUserWithEmailAndPassword } from "firebase/auth";
 
-const fields = [
-  {
-    label: "Create your password ",
-    placeholder: "Enter password",
-    type: "password",
-  },
-  { label: "Confirm password", placeholder: "Enter password", type: "password" },
-];
+
+
 const Password = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const prevData = location.state;
+
+
+  const [passwordData, setPasswordData] = useState({
+    password: "",
+    confirmPassword: "",
+  });
+
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    setPasswordData({ ...passwordData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+     console.log("prevData:", prevData);
+     console.log("email:", prevData?.email);
+     console.log("password:", passwordData.password);
+
+     if(!passwordData.password || !passwordData.confirmPassword){
+      setError("Please fill in all fields")
+      return
+     }
+
+    if (passwordData.password !== passwordData.confirmPassword) {
+      setError("Passwords do not match");
+      return
+    }
+
+    if(passwordData.password.length<6) {
+      setError("Password must be at least 6 characters")
+      return
+    }
+    
+    try {
+      const result = await createUserWithEmailAndPassword(
+        auth,
+        prevData.email,
+        passwordData.password,
+      );
+      await updateProfile(result.user, {
+        displayName: prevData.fullName
+      });
+      navigate("/");
+    } catch (err) {
+      setError(err.message);
+      console.log(error);
+       console.log("error code:", err.code);
+       console.log("error message:", err.message);
+    }
+  };
+
   return (
     <Auth>
       <h2 className="my-4 font-semibold text-2xl ">Create Password</h2>
-      <form className="flex flex-col">
-        {fields.map((field, i) => (
+      {error && <p className="text-red-500 text-xs">{error}</p>}
+      <form className="flex flex-col" onSubmit={handleSubmit}>
+        {stepTwoFields.map((field, i) => (
           <Input
             key={i}
             label={field.label}
             placeholder={field.placeholder}
             type={field.type}
+            name={field.name}
+            value={passwordData[field.name]}
+            onChange={handleChange}
           />
         ))}
         <div className="relative flex justify-center items-center mx-4 my-4 ">
