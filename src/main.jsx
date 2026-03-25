@@ -4,16 +4,22 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
 import SignUp from "./pages/SignUp.jsx";
-import LogIn from './pages/LogIn.jsx';
+import LogIn from "./pages/LogIn.jsx";
 import Password from "./pages/Password.jsx";
-
-// import Auth from './components/Auth.jsx'
+import { ProtectedRoute } from "./components/ProtectedRoute.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <App />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/passwordpage" element={<Password />} />

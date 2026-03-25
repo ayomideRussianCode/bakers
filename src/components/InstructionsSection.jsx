@@ -25,8 +25,8 @@ const InstructionsSection = () => {
           </p>
 
           <div className="font-productSans my-4">
-            {instructionsList.map((instruction) => (
-              <div className="flex gap-x-6 ">
+            {instructionsList.map((instruction, i) => (
+              <div key={i} className="flex gap-x-6 ">
                 <img className="h-8 w-8" src={instruction.img} alt="icon" />
 
                 <div>
