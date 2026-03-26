@@ -52,10 +52,10 @@ const LogIn = () => {
       <h2 className="my-4 font-semibold text-2xl ">Welcome Back!</h2>
       {error && <p className="text-red-500 text-xs">{error}</p>}
 
-      <div className="flex items-center bg-[#ffe0e8] rounded-lg shadow-xs">
+      <button onSubmit={handleSubmit} className="flex items-center bg-[#ffe0e8] rounded-lg shadow-xs">
         <img className="mx-2" src="/google-icon.png" alt="google-icon" />
         <p className="mx-2 text-xs font-normal">Sign in with Google</p>
-      </div>
+      </button>
       <div className="flex my-4 justify-center items-center ">
         <img
           className="h-0.5 w-20 md:w-40 lg:w-40 "
