@@ -4,8 +4,10 @@ import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import {auth} from '../firebase';
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import {auth, googleProvider} from '../firebase';
+
+
 
 const loginFields = [
   {
@@ -21,6 +23,15 @@ const LogIn = () => {
    const [formData, setFormData] = useState({ email: "", password: "" });
    const [error, setError] = useState("");
 
+   const handleGoogleSignIn = async () => {
+    try{
+      await signInWithPopup(auth, googleProvider)
+      navigate("/")
+    } catch (err) {
+          setError("Google sign in failed. Please try again.");
+
+    }
+   }
 
     const handleChange = (e) => {
       setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -52,7 +63,7 @@ const LogIn = () => {
       <h2 className="my-4 font-semibold text-2xl ">Welcome Back!</h2>
       {error && <p className="text-red-500 text-xs">{error}</p>}
 
-      <button onSubmit={handleSubmit} className="flex items-center bg-[#ffe0e8] rounded-lg shadow-xs">
+      <button onClick={handleGoogleSignIn} className="flex items-center bg-[#ffe0e8] rounded-lg shadow-xs">
         <img className="mx-2" src="/google-icon.png" alt="google-icon" />
         <p className="mx-2 text-xs font-normal">Sign in with Google</p>
       </button>
